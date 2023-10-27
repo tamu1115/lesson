@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <div class="bg_particle">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <!-- ↓背景固定の確認↓ -->
+
+    <section>
+        <div class="sample">
+            <h2>sampleheader</h2>
+        </div>
+        <div class="sample">
+            <h2>samplemain</h2>
+        </div>
+        <div class="sample">
+            <h2>samplefooter</h2>
+            <a href="#">aaaaaaaaaaaaaa</a>
+        </div>
+    </section>
+
+    <!-- ↑背景固定の確認↑-->
+
+    <!-- CreateJSのライブラリー読み込み -->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+
+    <!-- ParticleJSのライブラリー読み込み -->
+    <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script>
+    <script>
+
+        let startxvalue = window.innerWidth; // 画面横幅取得
+        let startxharf = startxvalue / 2; // 画面横幅の半分
+        let startyvalue = window.innerHeight; // 画面縦幅取得
+        let startycalc = startyvalue + 100; // 画面縦幅の計算
+
+        // 画面が読み込まれた際にcanvasの数値を指定する
+        $(window).on('load', function () {
+            let canvaswidth = document.querySelector('#myCanvas');
+            let canvasheight = document.querySelector('#myCanvas');
+            canvaswidth.width = startxvalue;
+            canvasheight.height = startyvalue;
+        });
+
+        // Stageオブジェクトを作成します。表示リストのルートになります。
+        stage = new createjs.Stage("myCanvas");
+
+        // パーティクルシステム作成します。
+        particleSystem = new particlejs.ParticleSystem();
+
+        
+        // パーティクルシステムの描画コンテナーを表示リストに登録します。
+        stage.addChild(particleSystem.container);
+        particleSystem.importFromJson(
+            {
+                "bgColor": "#00000",
+                "width": startxvalue,
+                "height": 300,
+                "emitFrequency": "200",
+                "startX": startxharf,
+                "startXVariance": 663,
+                "startY": startycalc,
+                "startYVariance": "148",
+                "initialDirection": "49",
+                "initialDirectionVariance": "360",
+                "initialSpeed": 10.4,
+                "initialSpeedVariance": 12.4,
+                "friction": 0.036,
+                "accelerationSpeed": 0.0105,
+                "accelerationDirection": "275.8",
+                "startScale": 0.37,
+                "startScaleVariance": "1",
+                "finishScale": "0",
+                "finishScaleVariance": "0",
+                "lifeSpan": "136",
+                "lifeSpanVariance": "27",
+                "startAlpha": "1",
+                "startAlphaVariance": "0",
+                "finishAlpha": "0",
+                "finishAlphaVariance": 0.5,
+                "shapeIdList": [
+                    "blur_circle"
+                ],
+                "startColor": {
+                    "hue": 18,
+                    "hueVariance": "32",
+                    "saturation": 99,
+                    "saturationVariance": 0,
+                    "luminance": "56",
+                    "luminanceVariance": "16"
+                },
+                "blendMode": true,
+                "alphaCurveType": "1",
+                "VERSION": "1.0.0"
+            }
+        )
+
+        // フレームレートの設定
+        createjs.Ticker.framerate = 60;
+        // 定期的に呼ばれる関数を登録
+        createjs.Ticker.on("tick", handleTick);
+
+        function handleTick() {
+            // パーティクルの発生・更新
+            particleSystem.update();
+
+            // 描画を更新する
+            stage.update();
+        }
+    </script>
+</body>
+
+</html>
