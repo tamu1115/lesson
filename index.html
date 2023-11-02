@@ -1,123 +1,600 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <title>北関東学院</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&family=Noto+Sans+JP&family=Noto+Serif+JP:wght@400;600&family=Sawarabi+Mincho&family=Tsukimi+Rounded:wght@500&family=Yomogi&display=swap"
+        rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
-    <div class="bg_particle">
-        <canvas id="myCanvas"></canvas>
+    <header>
+        <div class="nav_content">
+            <img class="logo" src="./image/header_logo.jpg" alt="">
+
+            <div class="openbtn" id="target">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav_target">
+                <ul>
+                    <li><a href="#main_visual">TOP</a></li>
+                    <li><a href="#overview">概要</a></li>
+                    <li><a href="#courses">学科一覧</a></li>
+                    <li><a href="#member">講師紹介</a></li>
+                    <li><a href="#news">開校状況</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+
+
+    </header>
+
+    <main>
+        <!-- メインビジュアル -->
+        <section id="main_visual">
+            <div class="visual">
+                <div class="visual_text">
+                    <h1>未経験からwebの<br>プロを目指すあなたへ</h1>
+                </div>
+
+                <div class="visual_back1">
+                </div>
+                <div class="visual_circle"></div>
+                <div class="visual_img"><img src="./image/engineer_01.png" alt=""></div>
+            </div>
+        </section>
+
+        <!-- 概要 -->
+        <section id="overview">
+            <h2>『北関東学院』が選ばれる３つの理由</h2>
+
+            <div class="overview_box">
+                <div class="overview_text">
+                    <h3>おすすめポイント１:<br>プロが教える実践的カリキュラム</h3>
+                    <p>各専門分野に特化したプロが最新の現場で取り入れられているノウハウを一から丁寧に指導！</p>
+                </div>
+                <img class="overview_img" src="./image/img (1).jpg" alt="">
+            </div>
+            <div class="overview_box reverse">
+                <div class="overview_text">
+                    <h3>おすすめポイント２:<br>受講料無料</h3>
+                    <p>厚生労働省の求職者支援制度により、
+                        月10万円の給付+交通費支給！</p>
+                </div>
+                <img class="overview_img" src="./image/img (6).jpg" alt="">
+            </div>
+            <div class="overview_box">
+                <div class="overview_text">
+                    <h3>おすすめポイント３:<br>就職サポート</h3>
+                    <p>各専門分野に特化したプロが最新の現場で取り入れられているノウハウを一から丁寧に指導！</p>
+                </div>
+                <img class="overview_img" src="./image/img (9).png" alt="">
+            </div>
+
+
+            <!-- <p>北関東学院は、就職・転職に有利なWeb系に特化した学院です。我々のプログラムは業界で高い評価を受けています。</p> -->
+        </section>
+
+        <!-- 学科一覧 -->
+        <section id="courses">
+            <h2>学科一覧</h2>
+            <div class="course-content">
+                <div class="course-box course1">
+                    <h3>WEBデザイン<br>クリエイター科</h3>
+                    <p>Webデザインの専門知識とクリエイティブスキルを磨き、魅力的なウェブサイトをデザインするためのコースです。</p>
+                </div>
+
+                <div class="course-box  course2">
+                    <h3>WEBフロントエンド<br>構築科</h3>
+                    <p>フロントエンド開発のスキルを習得し、ユーザビリティの高いウェブアプリケーションを構築するためのコースです。</p>
+                </div>
+
+                <div class="course-box course3">
+                    <h3>WEBプログラミング<br>デザイン科</h3>
+                    <p>プログラミングとデザインの融合を学び、高度なウェブプロジェクトのためのコーディングとデザインスキルを磨くコースです。</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- 講師紹介 -->
+        <section id="member">
+            <h2>講師紹介</h2>
+
+<!-- section1 -->
+<div class="member-content">
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/mori02.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br> 森　政之</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>Webデザインを一から学べるように丁寧に指導していきます。</p>
+        </div>
     </div>
 
-    <!-- ↓背景固定の確認↓ -->
-
-    <section>
-        <div class="sample">
-            <h2>sampleheader</h2>
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/matsumura02.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>松村　豪</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン<br>プログラミング</h4>
+                </div>
+            </div>
         </div>
-        <div class="sample">
-            <h2>samplemain</h2>
+        <div class="member-text">
+            <p>北関東学院ではプロの最新スキル学ぶことが出来ます。<br>一緒に挑戦しましょう。</p>
         </div>
-        <div class="sample">
-            <h2>samplefooter</h2>
-            <a href="#">aaaaaaaaaaaaaa</a>
+    </div>
+
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/ogawa_k.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>小川　弘二</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="member-text">
+            <p>デザインは楽しく生活するうえで、欠かせないものです。<br>デザインの勉強をすると、広い視野と柔軟な考えが育まれます。</p>
+        </div>
+    </div>
+</div>
 
-    <!-- ↑背景固定の確認↑-->
+<!-- section2 -->
+<div class="member-content">
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/ishida.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br> 石田　和也</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>北関東学院では「何かをつくりたい」「何かを伝えたい」というのを形にする方法を学ぶことができます。</p>
+        </div>
+    </div>
 
-    <!-- CreateJSのライブラリー読み込み -->
-    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/kanai.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>金井　佑樹</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン<br>プログラミング</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>新しくできることが少しずつ増えていくとやりがいを感じることができます。一緒に頑張りましょう。</p>
+        </div>
+    </div>
 
-    <!-- ParticleJSのライブラリー読み込み -->
-    <script src="https://cdn.rawgit.com/ics-creative/ParticleJS/release/1.0.0/libs/particlejs.min.js"></script>
-    <script>
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/hyodo.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>兵藤　勇気</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>職業訓練校では集中して勉学に励め、多様な年齢や経歴のクラスメイトと過ごして刺激をし合う環境がございます。</p>
+        </div>
+    </div>
+</div>
 
-        let startxvalue = window.innerWidth; // 画面横幅取得
-        let startxharf = startxvalue / 2; // 画面横幅の半分
-        let startyvalue = window.innerHeight; // 画面縦幅取得
-        let startycalc = startyvalue + 100; // 画面縦幅の計算
+<!-- section3 -->
+<div class="member-content">
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/kato.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br> 加藤　浩司</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>最初は難しいことでも、ひとつひとつ覚えていくと6ヶ月間で想像以上の成長を感じられると思います。</p>
+        </div>
+    </div>
 
-        // 画面が読み込まれた際にcanvasの数値を指定する
-        $(window).on('load', function () {
-            let canvaswidth = document.querySelector('#myCanvas');
-            let canvasheight = document.querySelector('#myCanvas');
-            canvaswidth.width = startxvalue;
-            canvasheight.height = startyvalue;
-        });
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/kudo02.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>工藤　悠</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>途中で挫折しそうになることもあると思いますが、最後までやり通した人には必ず道が開けると信じています。
+                学んだことは今後の人生に役立ちます。</p>
+        </div>
+    </div>
 
-        // Stageオブジェクトを作成します。表示リストのルートになります。
-        stage = new createjs.Stage("myCanvas");
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/kamiyama.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>神山　祐也</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>社会人からしっかり学べる機会はいい経験になると思います。一緒に学びを楽しみましょう。</p>
+        </div>
+    </div>
+</div>
 
-        // パーティクルシステム作成します。
-        particleSystem = new particlejs.ParticleSystem();
+<!-- section4 -->
+<div class="member-content">
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/tanaka_c.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br> 田中　知歩</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>授業では実際にWebサイトを制作しながらスキルを身につけてもらいます。</p>
+        </div>
+    </div>
 
-        
-        // パーティクルシステムの描画コンテナーを表示リストに登録します。
-        stage.addChild(particleSystem.container);
-        particleSystem.importFromJson(
-            {
-                "bgColor": "#00000",
-                "width": startxvalue,
-                "height": 300,
-                "emitFrequency": "200",
-                "startX": startxharf,
-                "startXVariance": 663,
-                "startY": startycalc,
-                "startYVariance": "148",
-                "initialDirection": "49",
-                "initialDirectionVariance": "360",
-                "initialSpeed": 10.4,
-                "initialSpeedVariance": 12.4,
-                "friction": 0.036,
-                "accelerationSpeed": 0.0105,
-                "accelerationDirection": "275.8",
-                "startScale": 0.37,
-                "startScaleVariance": "1",
-                "finishScale": "0",
-                "finishScaleVariance": "0",
-                "lifeSpan": "136",
-                "lifeSpanVariance": "27",
-                "startAlpha": "1",
-                "startAlphaVariance": "0",
-                "finishAlpha": "0",
-                "finishAlphaVariance": 0.5,
-                "shapeIdList": [
-                    "blur_circle"
-                ],
-                "startColor": {
-                    "hue": 18,
-                    "hueVariance": "32",
-                    "saturation": 99,
-                    "saturationVariance": 0,
-                    "luminance": "56",
-                    "luminanceVariance": "16"
-                },
-                "blendMode": true,
-                "alphaCurveType": "1",
-                "VERSION": "1.0.0"
-            }
-        )
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/tsuda.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>津田　直子</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>北関東学院にはWEB制作を学ぶ環境と専門の知識を持った講師が多く在籍しております。
+                短期間でプロのスキルを身につけましょう。
+            </p>
+        </div>
+    </div>
 
-        // フレームレートの設定
-        createjs.Ticker.framerate = 60;
-        // 定期的に呼ばれる関数を登録
-        createjs.Ticker.on("tick", handleTick);
+    <div class="member-box">
+        <div class="profile_box">
+            <img class="member-img" src="./image/profile/ogawa.jpg" alt="alt">
+            <div class="member-plofile">
+                <h3>講師<br>小川　将</h3>
+                <br>
+                <h4 class="kamoku">担当:</h4>
+                <div class="kamoku">
+                    <h4>パソコン基礎<br>WEBデザイン</h4>
+                </div>
+            </div>
+        </div>
+        <div class="member-text">
+            <p>卒業生はWEBデザイナー・コーダー・ECサイトの運営などの職業にて、学んだことを活かして
+                活躍されております。自分の個性とスキルを活かして良い転職先を見つけましょう。
+            </p>
+        </div>
+    </div>
+</div>
 
-        function handleTick() {
-            // パーティクルの発生・更新
-            particleSystem.update();
 
-            // 描画を更新する
-            stage.update();
-        }
-    </script>
+            <!-- section5 -->
+            <div class="member-content">
+                <div class="member-box">
+                    <div class="profile_box">
+                        <img class="member-img" src="./image/profile/ishimaru.jpg" alt="alt">
+                        <div class="member-plofile">
+                            <h3>講師<br>石丸　卓嗣</h3>
+                            <br>
+                            <h4 class="kamoku">担当:</h4>
+                            <div class="kamoku">
+                                <h4>パソコン基礎<br>WEBデザイン<br>プログラミング</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-text">
+                    <p>北関東学院では様々な年代の方、様々な目標で進んでいる方が在籍されております。
+                        個々がこれから先活躍出来るように。誠心誠意サポートいたします。
+                    </p>
+                    </div>
+                </div>
+
+                <div class="member-box">
+                    <div class="profile_box">
+                        <img class="member-img" src="./image/profile/yamada.jpg" alt="alt">
+                        <div class="member-plofile">
+                            <h3>事務員<br>山田　由紀子</h3>
+                            <br>
+                            <h4 class="kamoku">担当:</h4>
+                            <div class="kamoku">
+                                <h4>事務</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-text">
+                    <p>皆様が安心して学べるように支えていけるように、尽力しております。</p>
+                    </div>
+                </div>
+
+                <div class="member-box">
+                    <div class="profile_box">
+                        <img class="member-img" src="./image/profile/kawamura.jpg" alt="alt">
+                        <div class="member-plofile">
+                            <h3>就職支援員<br>川村　敏憲</h3>
+                            <br>
+                            <h4 class="kamoku">担当:</h4>
+                            <div class="kamoku">
+                                <h4>就職支援</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-text">
+                    <p>北関東学院は就職を目標としておりますので、就職相談や面接のアドバイスなど、
+                        自身のスキルを活かして就職できるようにサポート体制を整えております。
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <!-- 開校状況に関する情報 -->
+        <section id="news" class="m_left50 m_bottom15">
+            <h2>新着情報・開講コース情報</h2>
+
+            <h3>現在募集中のコース</h3>
+            <dl class="course Recruitment">
+                <dt>10月26日より募集開始</dt>
+                <dd class="news__course-name">
+                    12月開講WEBデザインクリエーター科<br />
+                    <a href="http://www.kitakanto-gakuin.net/flyer/web_2023_12.pdf" target="_blank">詳しい資料はこちら</a>
+                </dd>
+            </dl>
+
+            <h3>受付終了のコース</h3>
+            <dl class="course">
+                <hr />
+                <dd>11月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>11月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>10月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>9月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講WEBフロントエンド構築科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>7月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>6月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>4月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>3月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講WEBフロントエンド構築科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>1月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>12月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>11月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>11月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>10月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>9月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講WEBフロントエンド構築科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>7月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>6月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>4月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>3月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講JAVAプログラミング科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>1月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>12月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>11月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>10月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>9月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>8月開講JAVAプログラミング科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>7月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>6月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>5月開講WEBプログラミングデザイン科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>4月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>3月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>2月開講JAVAプログラミング科</dd>
+                <dd class="pdl_20">受付終了</dd>
+                <hr />
+                <dd>1月開講WEBデザインクリエーター科</dd>
+                <dd class="pdl_20">受付終了</dd>
+            </dl>
+            </div>
+
+        </section>
+
+        <section id="access">
+            <h2>アクセス</h2>
+            <div class="access_box">
+                <div class="access_text">
+                    <table>
+                        <tr>
+                            <th>電話番号</th>
+                            <th>住所</th>
+                            <th>交通機関</th>
+
+                        </tr>
+                        <td>☎011-232-5508</td>
+                        <td>〒064-0809<br>北海道札幌市中央区<br>南９条西３丁目２−１０<br>札幌Ｋ．Ｓビル 6F</td>
+                        <td>地下鉄「中島公園」駅<br>1・2番出口　徒歩1分</td>
+                    </table>
+                </div>
+                <div class="access_imagebox">
+                    <img class="access_image" src="./image/kitakanto.jpg" alt="">
+                </div>
+            </div>
+
+            </div>
+
+            <!-- 関連リンクを追加 -->
+        </section>
+    </main>
+    <footer>
+        <small>お問い合わせ: info@kitakanto-gakuin.example</small><br>
+        <small>&copy; 2023 北関東学院. All Rights Reserved.</small>
+    </footer>
+
+
+        <!-- jquery -->
+        <script>
+            $('#target').click(()=>{
+                $('#target').toggleClass('active');
+                $('#nav_target').toggleClass('nav_active');
+            });
+        </script>
 </body>
 
 </html>
